@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_board"]
+[ext_resource type="Texture2D" path="res://assets/board/sea_light.png" id="2_light"]
+[ext_resource type="Texture2D" path="res://assets/board/sea_dark.png" id="3_dark"]
+[ext_resource type="Texture2D" path="res://assets/board/frame.png" id="4_frame"]
+
+[node name="Board" type="Control"]
+custom_minimum_size = Vector2(324, 334)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 324.0
+offset_bottom = 334.0
+script = ExtResource("1_board")
+light_texture = ExtResource("2_light")
+dark_texture = ExtResource("3_dark")
+
+[node name="Squares" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 34.0
+offset_top = 39.0
+offset_right = 290.0
+offset_bottom = 295.0
+
+[node name="Frame" type="TextureRect" parent="."]
+anchors_preset = 0
+offset_right = 324.0
+offset_bottom = 334.0
+mouse_filter = 2
+texture = ExtResource("4_frame")
+
+[node name="Labels" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
